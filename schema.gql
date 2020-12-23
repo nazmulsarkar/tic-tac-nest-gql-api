@@ -1,0 +1,32 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Game {
+  id: ID!
+  GameName: String!
+  GameHistory: [[String!]!]!
+}
+
+type Query {
+  games: [Game!]!
+  game(id: String!): Game!
+}
+
+type Mutation {
+  createGame(createGameInput: CreateGameInput!): Game!
+  updateGame(updateGameInput: UpdateGameInput!, id: String!): Game!
+  removeGame(id: String!): Game!
+}
+
+input CreateGameInput {
+  id: ID
+  GameName: String!
+  GameHistory: [[String!]!]!
+}
+
+input UpdateGameInput {
+  id: ID
+  GameName: String
+  GameHistory: [[String!]!]!
+}
